@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package mensajeria_mecanismos;
+package ec.edu.ups.sockets;
 
+import mensajeria_mecanismos.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;

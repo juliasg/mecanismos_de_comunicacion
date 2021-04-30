@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package mensajeria_mecanismos;
+package ec.edu.ups.sockets;
 
+import ec.edu.ups.sockets.*;
 import java.util.Observable;
 import java.util.Observer;
 
