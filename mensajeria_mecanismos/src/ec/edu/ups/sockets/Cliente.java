@@ -6,7 +6,7 @@
 
 package ec.edu.ups.sockets;
 
-import mensajeria_mecanismos.*;
+import ec.edu.ups.sockets.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
