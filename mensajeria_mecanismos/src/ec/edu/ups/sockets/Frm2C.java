@@ -7,6 +7,7 @@
 package ec.edu.ups.sockets;
 
 import ec.edu.ups.sockets.*;
+import java.util.Calendar;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -95,7 +96,10 @@ public class Frm2C extends javax.swing.JFrame implements Observer{
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         String mensaje = "2: "+this.jTextField2.getText() + "\n";
+         Calendar calendario = Calendar.getInstance();
+        int hora =calendario.get(Calendar.HOUR_OF_DAY);
+        int minutos = calendario.get(Calendar.MINUTE);
+         String mensaje = "2: "+this.jTextField2.getText() + " "+String.valueOf(hora)+":"+String.valueOf(minutos) + "\n";
         this.jTextArea2.append(mensaje);
         Cliente  c = new Cliente (3050, mensaje);
         Thread t = new Thread(c);

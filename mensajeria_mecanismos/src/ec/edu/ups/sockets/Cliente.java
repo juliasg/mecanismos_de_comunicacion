@@ -11,6 +11,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,6 +22,7 @@ import java.util.logging.Logger;
 public class Cliente implements Runnable{
     private int puerto;
     private String mensaje1;
+  
     public Cliente(int puerto, String mensaje1){
        this.puerto = puerto;
        this.mensaje1 = mensaje1;
@@ -35,11 +37,8 @@ public class Cliente implements Runnable{
                try {
              Socket sc = new Socket(HOST, puerto);
             // in = new DataInputStream(sc.getInputStream());
-             out = new DataOutputStream(sc.getOutputStream());
-             
+             out = new DataOutputStream(sc.getOutputStream());                 
              out.writeUTF(mensaje1);
-            
-             
              sc.close();
              
          } catch (IOException ex) {

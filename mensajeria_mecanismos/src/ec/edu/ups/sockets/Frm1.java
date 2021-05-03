@@ -7,6 +7,8 @@
 package ec.edu.ups.sockets;
 
 import ec.edu.ups.sockets.*;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -44,6 +46,7 @@ public class Frm1 extends javax.swing.JFrame implements Observer {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ventana1");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -93,7 +96,11 @@ public class Frm1 extends javax.swing.JFrame implements Observer {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String mensaje = "1: "+this.jTextField1.getText() + "\n";
+        Calendar calendario = Calendar.getInstance();
+        int hora =calendario.get(Calendar.HOUR_OF_DAY);
+        int minutos = calendario.get(Calendar.MINUTE);
+
+        String mensaje = "1: "+this.jTextField1.getText() + " "+String.valueOf(hora)+":"+String.valueOf(minutos) + "\n";
         this.jTextArea1.append(mensaje);
         Cliente  c = new Cliente (4050, mensaje);
         Thread t = new Thread(c);
